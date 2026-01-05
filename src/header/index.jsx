@@ -1,40 +1,39 @@
+import { NavLink } from "react-router-dom";
 import styles from "./styles.module.css";
-import { useState } from "react";
-function Header() {
-  const [active, setActive] = useState("home");
 
+function Header() {
   return (
-    <div className={styles.headerContainer}>
-      <p className={styles.sneakerStore}>Сникер - Магазин</p>
-      <div className={styles.navigation}>
-        <p
-          className={`${styles.navbar} ${
-            active === "home" ? styles.active : ""
-          }`}
-          onClick={() => setActive("home")}
+    <header>
+      <nav>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            `${styles.navbar} ${isActive ? styles.active : ""}`
+          }
         >
           Главная
-        </p>
+        </NavLink>
 
-        <p
-          className={`${styles.navbar} ${
-            active === "cart" ? styles.active : ""
-          }`}
-          onClick={() => setActive("cart")}
+        <NavLink
+          to="/cart"
+          className={({ isActive }) =>
+            `${styles.navbar} ${isActive ? styles.active : ""}`
+          }
         >
           Корзина
-        </p>
+        </NavLink>
 
-        <p
-          className={`${styles.navbar} ${
-            active === "contacts" ? styles.active : ""
-          }`}
-          onClick={() => setActive("contacts")}
+        <NavLink
+          to="/contacts"
+          className={({ isActive }) =>
+            `${styles.navbar} ${isActive ? styles.active : ""}`
+          }
         >
           Контакты
-        </p>
-      </div>
-    </div>
+        </NavLink>
+      </nav>
+    </header>
   );
 }
+
 export default Header;
