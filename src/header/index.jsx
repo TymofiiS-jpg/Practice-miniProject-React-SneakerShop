@@ -3,10 +3,12 @@ import styles from "./styles.module.css";
 
 function Header() {
   return (
-    <header>
-      <nav>
+    <div className={styles.headerContainer}>
+      <p className={styles.sneakerStore}>Сникер - Магазин</p>
+      <div className={styles.navigation}>
         <NavLink
           to="/"
+          end
           className={({ isActive }) =>
             `${styles.navbar} ${isActive ? styles.active : ""}`
           }
@@ -31,8 +33,8 @@ function Header() {
         >
           Контакты
         </NavLink>
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 }
 
