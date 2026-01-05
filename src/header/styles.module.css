@@ -1,0 +1,36 @@
+.headerContainer {
+  background-color: rgba(59, 60, 61, 1);
+  max-width: 1920px;
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 43px 250px 43px 250px;
+}
+
+.navigation {
+  display: flex;
+  gap: 64px;
+}
+
+.sneakerStore {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 1);
+}
+
+.navbar {
+  font-style: Montserrat;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 15px;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.active {
+  color: rgba(255, 255, 255, 1);
+}
